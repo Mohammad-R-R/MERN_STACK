@@ -64,6 +64,11 @@ console.log(willThisWork);
 // it will print value, 1,5
 
 
+const [firstAnimal, secondAnimal, ...otherAnimals] = animals;
+otherAnimals
+
+console.log(otherAnimals);
+
 
 
 
