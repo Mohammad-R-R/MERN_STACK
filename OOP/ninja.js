@@ -20,9 +20,12 @@ class Ninja {
    }
 
    showStat(){
+       
        console.log(this.strength);
        console.log(this.speed);
        console.log(this.health);
+       
+
    }
 
    drinkSake(){
@@ -42,6 +45,9 @@ class Ninja {
     n.drinkSake();
   
     n.showStat();
+
+
+
 
 
 
