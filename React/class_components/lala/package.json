@@ -1,5 +1,5 @@
 {
-  "name": "props",
+  "name": "lala",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,12 +12,10 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-   
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "start": "node props.js"
-    
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -37,6 +35,4 @@
       "last 1 safari version"
     ]
   }
-
-
 }
