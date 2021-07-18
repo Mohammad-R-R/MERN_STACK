@@ -1,50 +1,35 @@
 import React, { useState } from  'react';
     
     
-const UserForm = (props) => {
-    const [username, setUsername] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");  
+const MovieForm = (props) => {
+    const [title, setTitle] = useState("");
+    const [titleError, setTitleError] = useState("");
     
-    const createUser = (e) => {
-        e.preventDefault();
-        const newUser = { username, email, password };
-        console.log("Welcome", newUser);
-    };
+    const handleTitle = (e) => {
+        setTitle(e.target.value);
+        if(e.target.value.length < 1) {
+            setTitleError("Title is required!");
+        } else if(e.target.value.length < 3) {
+            setTitleError("Title must be 3 characters or longer!");
+        }
+    }
     
-    return(
+    {/* rest of component removed for brevity */}
     
-       <div>
-    <form onSubmit={ createUser }>
-            <div>
-                <label>Username: </label> 
-                <input type="text" onChange={ (e) => setUsername(e.target.value) } />
-            </div>
-            <div>
-                <label>Email Address: </label> 
-                <input type="text" onChange={ (e) => setEmail(e.target.value) } />
+    return (
+        <form onSubmit={ (e) => e.preventDefault() }>
+            <div>
+                <label>Title: </label>
+                <input type="text" onChange={ handleTitle } />
+                {
+                    titleError ?
+                    <p style={{color:'red'}}>{ titleError }</p> :
+                    ''
+                }
             </div>
-            <div>
-                <label>Password: </label>
-                <input type="password" onChange={ (e) => setPassword(e.target.value) } />
-            </div>
-            <input type="submit" value="Create User" />
-
-
-
-        </form>
-<h1>{email}</h1>
-<table>
-
-
-
-
-
-</table>
-</div>
-
-        
-    );
-};
+            <input type="submit" value="Create Movie" />
+        </form>
+    );
+}
     
-export default UserForm;
+export default MovieForm;

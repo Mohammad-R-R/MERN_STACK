@@ -1,12 +1,12 @@
 
 import './App.css';
 
-import UserForm from '../src/components/comp';
+import MovieForm from '../src/components/comp';
 
 function App() {
   return (
     <div className="App">
-      <UserForm />
+      <MovieForm />
       
     </div>
   );
