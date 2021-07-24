@@ -1,15 +1,23 @@
+import React, { useState } from 'react';
+import MessageForm from './components/form';
+import MessageDisplay from './components/twof';
+    
 
-import './App.css';
-
-import MovieForm from '../src/components/comp';
-
+    
+    
 function App() {
+  const [currentMsg, setCurrentMsg] = useState("There are no messages");
+  
+  const youveGotMail = ( newMessage ) => {
+      setCurrentMsg( newMessage );
+  }
+  
   return (
-    <div className="App">
-      <MovieForm />
-      
-    </div>
+      <>
+          <MessageForm onNewMessage={ youveGotMail } />
+          <MessageDisplay mes={ currentMsg } />
+      </>
   );
 }
-
+    
 export default App;
