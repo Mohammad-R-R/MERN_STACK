@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import MessageForm from './components/form';
 import MessageDisplay from './components/twof';
+import MyComponent from './components/comp';
     
 
     
@@ -14,8 +15,8 @@ function App() {
   
   return (
       <>
-          <MessageForm onNewMessage={ youveGotMail } />
-          <MessageDisplay mes={ currentMsg } />
+        <MyComponent/>
+         
       </>
   );
 }
