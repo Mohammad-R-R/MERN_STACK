@@ -1,23 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import Colorchange from './components/secondox'
+import MessageDisplay from './components/firstbox'
+import react, { useState } from 'react';
+
 
 function App() {
+  const  [generated, setGenerated] = useState([]);
+
+  const generateBox = (boxes) => {
+    setGenerated(generated.concat(boxes));
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Colorchange createBox={generateBox} />
+      <MessageDisplay dam={generated}/>
+      {/* <MessageDisplay /> */}
+
     </div>
   );
 }
