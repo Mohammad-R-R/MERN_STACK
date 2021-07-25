@@ -1,16 +1,17 @@
 import React,{useState} from "react";
+import axios from 'axios';
 
 const Example = (props) => {
+
     const [pokemon, setPeople] = useState([]);
+
  const rem = (e) => {   
    
-        fetch('https://pokeapi.co/api/v2/pokemon?limit=807')
-            .then(response => response.json())
-            .then((x) => setPeople(x.results))//x is the response
-
-            .catch("error")
-            console.log("hello");
-           
+        axios.get('https://pokeapi.co/api/v2/pokemon?limit=807')
+       
+        .then((x) => setPeople(x.data.results))
+        
+            
  };
  
     return (
