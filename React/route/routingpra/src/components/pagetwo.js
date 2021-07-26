@@ -1,8 +1,9 @@
 import React from 'react';
 
 const Home = props => {
-    console.log(props);
+    
     if (props.id==null) {
+        console.log(props)
         return (
             <div>
                 <h2>Welcome</h2>
