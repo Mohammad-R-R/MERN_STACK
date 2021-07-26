@@ -1,0 +1,12 @@
+https://pokeapi.co/api/v2/evolution-chain/7/
+
+https://pokeapi.co/api/v2/evolution-trigger/1
+
+https://pokeapi.co/api/v2/generation/2/
+
+https://pokeapi.co/api/v2/pokedex/1/
+
+https://pokeapi.co/api/v2/version-group/4/
+
+
+
